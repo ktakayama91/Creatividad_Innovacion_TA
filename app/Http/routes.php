@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
+// Route::get('/', function () {
+//     return view('landing');
+// });
+
+/* HOME */
+Route::get('/',['uses'=>'HomeController@index', 'as'=>'home.index']);
+
+/* GUIA */
+Route::group(['prefix' => 'guia'], function(){
+	Route::get('/',['uses'=>'GuiaController@index', 'as'=>'guia.index']);
 });
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
