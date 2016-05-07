@@ -120,6 +120,7 @@
 			</span>
 			<h4 class="service-heading">Guía Libre de Gluten</h4>
 			<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+			<a href="{{ route('guia.index')}}" class="btn btn-xl">Ir a la guía</a>
 		</div>
 	</div>
 </section>

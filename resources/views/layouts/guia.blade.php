@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Perú Sin Glúten | HOME</title>
+	<title>Perú Sin Glúten | GUÍA</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -51,13 +51,10 @@
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">					
 					<li>
-						<a class="page-scroll" href="#gluten">¿Qué es el Glúten?</a>
+						<a class="page-scroll" href="{{ route('home.index') }}">Inicio</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#celiaco">¿Soy Celiaco?</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#guia">¿Dónde puedo comer?</a>
+						<a class="page-scroll" href="#">Guía</a>
 					</li>					
 				</ul>
 			</div>
@@ -65,22 +62,8 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-
-	<!-- Header -->
-	<header>
-		<div class="container">
-			<div class="intro-text">
-				<div class="intro-heading">Perú Sin Glúten</div>
-				<div class="intro-lead-in">Por una Dieta Libre de Glúten</div>
-			</div>
-		</div>
-	</header>
 	
-	@yield('gluten')
-	
-	@yield('celiaco')  
-
-	@yield('guia')
+	@yield('content')
 
 	@include('layouts.footer')
 
