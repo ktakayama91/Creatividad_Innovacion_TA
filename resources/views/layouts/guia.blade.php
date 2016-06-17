@@ -23,12 +23,28 @@
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+	<!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('dist/datatables/dataTables.bootstrap.css') }}">
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+
+	<style>
+      #map {
+        width: 95%;
+        height: 500px;
+        margin-left: auto;
+  		margin-right: auto;
+  		border-radius: 10px;
+    	border: 5px ridge #C0C0C0;
+    	
+    
+      }
+    </style>
 </head>
 
 <body id="page-top" class="index">
@@ -51,10 +67,10 @@
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">					
 					<li>
-						<a class="page-scroll" href="{{ route('home.index') }}">Inicio</a>
+						<a class="page-scroll" href="{{ route('home.index') }}">HOME</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#">Guía</a>
+						<a class="page-scroll" href="#">VOLVER ARRIBA <span class="glyphicon glyphicon-menu-up"></span></a>
 					</li>					
 				</ul>
 			</div>
@@ -64,6 +80,10 @@
 	</nav>
 	
 	@yield('content')
+
+	@yield('nearme')
+
+	@yield('search')
 
 	@include('layouts.footer')
 
@@ -84,6 +104,27 @@
 
 	<!-- Custom Theme JavaScript -->
 	<script src="{{ asset('dist/js/agency.js') }}"></script>
+
+	<!-- Google Maps API -->
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+	<script src="{{ asset('dist/js/map.js') }}"></script>
+
+	<!-- DataTables -->
+    <script src="{{ asset('dist/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('dist/datatables/dataTables.bootstrap.min.js') }}"></script>
+
+    <script>
+      $(function () {              	
+        $('#example1').DataTable({
+          "paging": true,
+          "lengthChange": true,
+          "searching": true,
+          "ordering": true,
+          "info": true,
+          "autoWidth": true
+        });
+      });
+    </script>
 
 </body>
 

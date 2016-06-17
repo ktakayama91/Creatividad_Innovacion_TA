@@ -14,7 +14,7 @@
 	<link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
 	<!-- Custom CSS -->
-	<link href="{{ asset('dist/css/agency.css') }}" rel="stylesheet">
+	<link href="{{ asset('dist/css/agency.css') }}" rel="stylesheet">	
 
 	<!-- Custom Fonts -->
 	<link href="{{ asset('dist/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -51,14 +51,17 @@
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">					
 					<li>
-						<a class="page-scroll" href="#gluten">¿Qué es el Glúten?</a>
+						<a class="page-scroll" href="#gluten">¿Qué es la alergia al Glúten?</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#celiaco">¿Soy Celiaco?</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#guia">¿Dónde puedo comer?</a>
-					</li>					
+					</li>
+					<li hidden>
+						<a  class="page-scroll" href="#">VOLVER ARRIBA <span class="glyphicon glyphicon-menu-up"></span></a>
+					</li>				
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

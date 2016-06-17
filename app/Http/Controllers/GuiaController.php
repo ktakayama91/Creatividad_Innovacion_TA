@@ -14,8 +14,8 @@ class GuiaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('guia');
+    {return view('guia');
+        
     }
 
     /**
